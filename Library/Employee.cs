@@ -12,9 +12,9 @@ public class Employee
     public static Employee FromString(string input) =>
         input switch
         {
-            "ВРАЧИ" => Doctor(),
-            "Средний медперсонал" => Middle(),
-            "Младший" => Junior(),
+            _ when input.ContainsOrdinalIgnoreCase("Врачи") => Doctor(),
+            _ when input.ContainsOrdinalIgnoreCase("Средний медперсонал") => Middle(),
+            _ when input.ContainsOrdinalIgnoreCase("Младший") => Junior(),
             _ => throw new("Нет типа для работника")
         };
 

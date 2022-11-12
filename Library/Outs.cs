@@ -10,7 +10,7 @@ public record class Outs
 
     public Outs(string input)
     {
-        var splitted = input.Split('x').ToArray();
+        var splitted = input.Split('x', '*', 'х').ToArray();
         
         Days = int.Parse(splitted[0]);
         Hours = int.Parse(splitted[1].Split(',').First());

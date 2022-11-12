@@ -48,7 +48,7 @@ public class WorkTimeCalculator
             .Aggregate(totalTime, (current, changedDay) => current.Subtract(workedTimes.PerDay).Add(changedDay));
 
         if (TotalNeeded != totalTime)
-            throw new("Ошибка! Итоговое время не совпадает!");
+            throw new($"Ошибка! Итоговое время не совпадает! Время: {TotalNeeded.Subtract(totalTime)}");
     }
 
 

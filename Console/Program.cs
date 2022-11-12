@@ -1,20 +1,20 @@
 ﻿using Library;
 
-var totalNeeded = new TimeSpan(132, 0, 0);
-var outs = new Outs("4x8,00");
+var totalNeeded = new TimeSpan(169, 24, 0);
+var outs = new Outs("2x8,00");
 var employee = Employee.Junior();
 var totalWorkDays = 22;
 var calculator = new WorkTimeCalculator(totalNeeded, outs, employee, totalWorkDays);
 
-
+Check();
 
 void Check()
 {
     var result = calculator!.Check(
         new(
-            12,
-            new(4, 35, 0),
-            Enumerable.Repeat(new TimeSpan(4, 30, 0), 10).ToList()
+            21,
+            new(6, 58, 0),
+            Enumerable.Repeat(new TimeSpan(7, 6, 0), 1).ToList()
         )
     );
     Console.WriteLine(result);

@@ -3,6 +3,10 @@
 
 public static class Extensions
 {
+    public static bool ContainsOrdinalIgnoreCase(this string input, string contains) =>
+        input.Contains(contains, StringComparison.OrdinalIgnoreCase);
+
+
     public static string ToExcelString(this TimeSpan timeSpan) => $"{timeSpan.Hours}.{timeSpan.Minutes}";
 
 
