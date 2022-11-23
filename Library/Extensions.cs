@@ -7,7 +7,7 @@ public static class Extensions
         input.Contains(contains, StringComparison.OrdinalIgnoreCase);
 
 
-    public static string ToExcelString(this TimeSpan timeSpan) => $"{timeSpan.Hours}.{timeSpan.Minutes}";
+    public static string ToExcelString(this TimeSpan timeSpan) => $"{timeSpan.Hours},{timeSpan.Minutes}";
 
 
     public static TimeSpan TimeSpanFromString(string input)

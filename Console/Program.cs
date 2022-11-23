@@ -6,7 +6,7 @@ var employee = Employee.Doctor();
 var totalWorkDays = 8;
 var calculator = new WorkTimeCalculator(totalNeeded, outs, employee, totalWorkDays);
 
-// Test();
+//Test();
 //var res = ExcelFunctions.WorkTime("1,0=72,36", "5x5,00", "Врачи", "8");
 
 void Check()
