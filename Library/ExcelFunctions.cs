@@ -13,14 +13,20 @@ public static class ExcelFunctions
         var outs = new Outs(outsInput);
         var employee = Employee.FromString(employeeInput);
         var totalWorkDays = int.Parse(totalWorkDaysInput);
-        
+
         var calculator = new WorkTimeCalculator(totalNeeded, outs, employee, totalWorkDays);
         var result = calculator.Calculate();
-        
+
+        if (result.ChangedDays.Count == 0)
+            return new object[,]
+            {
+                { $"{result.NormalDays}x{result.PerDay.ToExcelString()}" }
+            };
+
         return new object[,]
         {
             { $"{result.NormalDays}x{result.PerDay.ToExcelString()}" },
-            { $"{result.ChangedDays.Count}x{result.ChangedDays.First().ToExcelString()}" },
+            { $"{result.ChangedDays.Count}x{result.ChangedDays.First().ToExcelString()}" }
         };
     }
 }

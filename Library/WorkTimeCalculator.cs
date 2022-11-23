@@ -54,6 +54,9 @@ public class WorkTimeCalculator
 
     private WorkedTimes WorkedTimes(TimeSpan perDay, TimeSpan remain)
     {
+        if (remain == TimeSpan.Zero)
+            return new(TotalWorkDays, perDay, new());
+        
         var normalDays = TotalWorkDays;
         var changedDays = new List<TimeSpan>();
 
