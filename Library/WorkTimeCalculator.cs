@@ -44,6 +44,9 @@ public class WorkTimeCalculator
 
     private void ChaseUpWorkTime(WorkedTimes workedTimes, TimeSpan totalTime)
     {
+        if (workedTimes.PerDay > Employee.MaxWorkedHours || workedTimes.ChangedDays.Any(x => x > Employee.MaxWorkedHours))
+            throw new("Ошибка! Дни не могут превышать максимум в день для работника данного типа");
+        
         totalTime = workedTimes.ChangedDays
             .Aggregate(totalTime, (current, changedDay) => current.Subtract(workedTimes.PerDay).Add(changedDay));
 

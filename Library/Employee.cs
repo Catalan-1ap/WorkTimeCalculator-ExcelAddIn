@@ -21,7 +21,7 @@ public class Employee
 
     public static Employee Doctor() => new(new(6, 36, 0));
 
-    public static Employee Middle() => new(new(7, 42, 0));
+    public static Employee Middle() => new(new(7, 48, 0));
 
     public static Employee Junior() => new(new(8, 0, 0));
 }
