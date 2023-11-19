@@ -9,18 +9,6 @@ var calculator = new WorkTimeCalculator(totalNeeded, outs, employee, totalWorkDa
 
 Test();
 
-void Check()
-{
-    var result = calculator.Check(
-        new(
-            6,
-            new(6, 36, 0),
-            Enumerable.Repeat(new TimeSpan(4, 51, 0), 2).ToList()
-        )
-    );
-    Console.WriteLine(result);
-}
-
 
 void Test()
 {
