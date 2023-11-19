@@ -1,13 +1,13 @@
 ﻿using Library;
 
-var totalNeeded = new TimeSpan(68, 18, 0);
-var outs = new Outs("4x5,00");
+
+var totalNeeded = new TimeSpan(32, 0, 0);
+var outs = new Outs("4x5");
 var employee = Employee.Doctor();
 var totalWorkDays = 7;
 var calculator = new WorkTimeCalculator(totalNeeded, outs, employee, totalWorkDays);
 
 Test();
-//var res = ExcelFunctions.WorkTime("1,0=69,18", "4x5,00", "Врачи", "7");
 
 void Check()
 {
