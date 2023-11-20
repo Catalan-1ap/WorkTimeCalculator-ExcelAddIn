@@ -8,7 +8,6 @@ var totalWorkDays = 7;
 var calculator = new WorkTimeCalculator(totalNeeded, outs, employee, totalWorkDays);
 
 Test();
-// 1
 
 void Check()
 {
